@@ -6,6 +6,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 /**
@@ -20,12 +21,13 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
-        Parent root = FXMLLoader.load(getClass()
-                .getResource("primary.fxml"));
+        AnchorPane root = FXMLLoader.load(getClass()
+                .getResource("text-area-right.fxml"));
         Scene scene = new Scene(root);
+
         stage.setScene(scene);
+        stage.setMinHeight(120);
         stage.sizeToScene();
-        stage.setResizable(false);
         stage.show();
     }
 
