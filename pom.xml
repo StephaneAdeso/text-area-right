@@ -9,7 +9,7 @@
 
     <modules>
         <module>nodemodule</module>
-        <module>launcher</module>
+        <module>launchermodule</module>
     </modules>
 
     <properties>

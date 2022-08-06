@@ -8,9 +8,9 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.adeso.custom</groupId>
-    <artifactId>launcher</artifactId>
+    <artifactId>launchermodule</artifactId>
     <version>0.0.1</version>
-    <name>launcher</name>
+    <name>launchermodule</name>
 
     <dependencies>
         <dependency>
