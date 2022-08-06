@@ -9,7 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
 
-public class TextAreaRightRootController extends AnchorPane {
+public class TextAreaRight extends AnchorPane {
 
     private TextAreaRightNodesController nodesController;
 
@@ -19,7 +19,7 @@ public class TextAreaRightRootController extends AnchorPane {
     Button button2;
     Label label;
 
-    public TextAreaRightRootController() throws IOException {
+    public TextAreaRight() throws IOException {
         super();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("text-area-right.fxml"));
         nodesController = new TextAreaRightNodesController();
