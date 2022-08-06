@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <artifactId>text-area-right</artifactId>
-    <groupId>com.adeso</groupId>
+    <groupId>com.adeso.custom</groupId>
     <version>0.0.1</version>
   </parent>
 
-  <groupId>com.adeso</groupId>
+  <groupId>com.adeso.custom</groupId>
   <artifactId>nodemodule</artifactId>
   <version>0.01</version>
   <name>nodemodule</name>
