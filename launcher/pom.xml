@@ -14,8 +14,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.adeso.custom</groupId>
-            <artifactId>nodemodule</artifactId>
+            <groupId>com.adeso.custom.textarea</groupId>
+            <artifactId>textarea</artifactId>
             <version>0.01</version>
         </dependency>
     </dependencies>
@@ -26,7 +26,7 @@
               ============================================
               ============================================  -->
 
-
+        <!-- TODO: Put this in the parent pom under pluginManagment  -->
         <plugins>
             <plugin>
                 <groupId>org.openjfx</groupId>
@@ -38,7 +38,7 @@
                         <!-- Usage: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.adeso.custom.Launcher</mainClass>
+                            <mainClass>com.adeso.custom.textarea.launcher.Launcher</mainClass>
                         </configuration>
                     </execution>
                 </executions>

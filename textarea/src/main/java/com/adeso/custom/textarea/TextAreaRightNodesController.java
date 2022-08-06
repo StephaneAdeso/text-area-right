@@ -1,4 +1,4 @@
-package com.adeso.custom;
+package com.adeso.custom.textarea;
 
 import java.net.URL;
 import java.util.ResourceBundle;
