@@ -2,14 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <artifactId>text-area-right</artifactId>
-    <groupId>com.adeso.custom</groupId>
+    <groupId>com.adeso.custom.textarea</groupId>
+    <artifactId>parent</artifactId>
     <version>0.0.1</version>
   </parent>
 
-  <groupId>com.adeso.custom</groupId>
-  <artifactId>nodemodule</artifactId>
+  <groupId>com.adeso.custom.textarea</groupId>
+  <artifactId>textarea</artifactId>
   <version>0.01</version>
-  <name>nodemodule</name>
+  <name>textarea</name>
 
 </project>
