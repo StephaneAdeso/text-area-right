@@ -1,23 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.adeso</groupId>
-    <artifactId>text-area-right</artifactId>
+    <groupId>com.adeso.custom.textarea</groupId>
+    <artifactId>parent</artifactId>
     <version>0.0.1</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>textarea</module>
+        <module>launcher</module>
+    </modules>
+
     <properties>
+        <java.version>17</java.version>
+        <javafx.version>17.0.2</javafx.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>17.0.2</maven.compiler.source>
-        <maven.compiler.target>17.0.2</maven.compiler.target>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
+
+
     <dependencies>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>17.0.2</version>
+            <version>${javafx.version}</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>17.0.2</version>
+            <version>${javafx.version}</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -26,46 +41,52 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
     <build>
-        <!--  ============================================
-              ============================================
-              =                 PLUGINS                  =  
-              ============================================
-              ============================================  -->
-
-
         <plugins>
+            <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>3.2.0</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.3.0</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.2</version>
+            </plugin>
+            <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.0</version>
+                <version>3.10.1</version>
                 <configuration>
-                    <release>11</release>
+                    <release>17</release>
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>org.openjfx</groupId>
-                <artifactId>javafx-maven-plugin</artifactId>
-                <version>0.0.8</version>
-                <executions>
-                    <execution>
-                        <!-- Default configuration for running -->
-                        <!-- Usage: mvn clean javafx:run -->
-                        <id>default-cli</id>
-                        <configuration>
-                            <mainClass>com.adeso.App</mainClass>
-                        </configuration>
-                    </execution>
-                </executions>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>3.0.1</version>
             </plugin>
-            <!--  +++++++++++++++++++++++++
-                  +          JUNIT        +
-                  +++++++++++++++++++++++++ -->
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>3.0.0</version>
+            </plugin>
+            <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M7</version>
             </plugin>
+
+            <plugin>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>4.0.0-M1</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>3.4.0</version>
+            </plugin>
         </plugins>
     </build>
+
+
 </project>
