@@ -2,6 +2,8 @@ package com.adeso.custom.textarea.launcher;
 
 import java.io.IOException;
 
+import com.adeso.custom.textarea.TextAreaRight;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -13,10 +15,7 @@ import javafx.stage.Stage;
  */
 public class Launcher extends Application {
 
-    // TODO:
-    // [ ] crear el módulo de textarea
-    // [ ] revisar los xml, sus nombres y carpetas
-    // [ ] pasar el plugin al pom padre
+    // TODO: pasar el plugin javafx al pom padre en plugin managment
 
     public static void main(String[] args) {
         launch(args);
@@ -27,6 +26,8 @@ public class Launcher extends Application {
 
         VBox root = FXMLLoader.load(getClass()
                 .getResource("launcher.fxml"));
+
+        root.getChildren().add(new TextAreaRight());
         Scene scene = new Scene(root);
 
         stage.setScene(scene);
