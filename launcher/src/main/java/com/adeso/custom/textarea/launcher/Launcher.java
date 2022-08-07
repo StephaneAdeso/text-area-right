@@ -13,6 +13,11 @@ import javafx.stage.Stage;
  */
 public class Launcher extends Application {
 
+    // TODO:
+    // [ ] crear el módulo de textarea
+    // [ ] revisar los xml, sus nombres y carpetas
+    // [ ] pasar el plugin al pom padre
+
     public static void main(String[] args) {
         launch(args);
     }
