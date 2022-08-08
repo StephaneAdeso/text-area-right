@@ -16,6 +16,7 @@ import javafx.stage.Stage;
 public class Launcher extends Application {
 
     // TODO: pasar el plugin javafx al pom padre en plugin managment
+    // TODO: Revisar porque coño peta ahora
 
     public static void main(String[] args) {
         launch(args);
